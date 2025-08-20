@@ -1,10 +1,7 @@
+# netlify.toml  (לשים בשורש הריפו)
 [build]
-  command = "npm run build"
-  # שים כאן את התיקייה הנכונה לפרויקט שלך: "build" (CRA) או "dist" (Vite)
-  publish = "build"
+  command = "npm run build"   # מריץ next build
+  publish = ".next"           # תיקיית פלט של Next.js (SSR/ISR)
 
 [build.environment]
   NODE_VERSION = "18"
-
-# דוגמה לדילוג על build אם רק README השתנה:
-# ignore = "git diff --quiet HEAD^ HEAD README.md"
