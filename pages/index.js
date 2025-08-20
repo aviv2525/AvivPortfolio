@@ -1,4 +1,10 @@
 import { useEffect } from "react";
+import { AboutSection } from './AboutSection.jsx';
+import { SkillsSection } from "./SkillsSection";
+import { ProjectsSection } from "./ProjectSection.jsx";
+import { AchievementsSection } from "./AchievementsSection.jsx";
+import { ContactSection  } from "./ContactSection.jsx";
+
 
 export default function Home() {
   useEffect(() => {
@@ -7,7 +13,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gray-50 text-gray-900">
-      {/* Header */}
+
       <header className="sticky top-0 z-50 border-b border-gray-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <h1 className="text-lg sm:text-xl font-semibold tracking-tight">
@@ -26,6 +32,7 @@ export default function Home() {
             Hire me
           </a>
         </div>
+      
       </header>
 
       {/* Hero Section */}
@@ -39,6 +46,7 @@ export default function Home() {
             Hi, I’m Aviv 👋
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
+            Computer Science B.Sc. student 
             Full‑stack developer in progress 🚀 specializing in Android, Web and Mobile apps.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -63,6 +71,8 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
+  
+      <ProjectsSection />
       <section id="projects" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
           <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center mb-10">
@@ -131,21 +141,31 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      {/* Achievements Section */}
+      <AchievementsSection />
       {/* About Section */}
+
+            <AboutSection />
       <section id="about" className="bg-gray-50">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
           <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center mb-6">
             About Me
           </h3>
           <p className="mx-auto max-w-3xl text-center text-gray-700">
-            I’m Aviv, a passionate developer who enjoys building mobile and web applications.
-            Skilled in Kotlin, React, Node.js, and modern development practices. Always eager to learn and create!
+           I am Aviv, a Computer Science student graduating this year with a strong academic background and hands-on development experience.  
+          I have a solid understanding of algorithms, data structures, and software design principles.  
+          Skilled in C# .NET, Java, Kotlin, and JavaScript (React, Node.js), I enjoy building both web and mobile applications.  
+          I am a fast learner with strong analytical skills, capable of quickly adapting to new technologies and solving complex problems efficiently.  
+          My current focus is on developing modern applications that combine clean architecture with an engaging user experience.
           </p>
         </div>
       </section>
-
+      {/* Skills Section */}
+      <SkillsSection />
       {/* Contact Section */}
+      <ContactSection />
+      {/* Contact Section */}
+
       <section id="contact" className="bg-white">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight mb-3">
@@ -158,7 +178,7 @@ export default function Home() {
             href="mailto:avivmalul13@gmail.com"
             className="inline-flex items-center rounded-2xl bg-white px-5 py-2.5 text-sm font-medium text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400/60"
           >
-            avivmalul13@example.com
+            avivmalul13@gmail.com
           </a>
         </div>
       </section>
@@ -174,14 +194,3 @@ export default function Home() {
     </main>
   );
 }
-
-/* הערת Netlify נשארת כמו אצלך אם תרצה דיפלוי:
-[build]
-  command = "npm run build"
-  publish = ".next"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-*/
