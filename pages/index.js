@@ -1,9 +1,17 @@
 import { useEffect } from "react";
-import { AboutSection } from './AboutSection.jsx';
-import { SkillsSection } from "./SkillsSection";
-import { ProjectsSection } from "./ProjectSection.jsx";
-import { AchievementsSection } from "./AchievementsSection.jsx";
-import { ContactSection  } from "./ContactSection.jsx";
+import  AboutSection  from'../components/AboutSection.jsx'
+import  SkillsSection  from "../components/SkillsSection.jsx";
+import  ProjectsSection  from "../components/ProjectsSection.jsx";
+import  {AchievementsSection}  from "../components/AchievementsSection.jsx";
+import  ContactSection   from "../components/ContactSection.jsx";
+
+console.log({
+  AboutSection,
+  SkillsSection,
+  ProjectsSection,
+  AchievementsSection,
+  ContactSection
+});
 
 
 export default function Home() {

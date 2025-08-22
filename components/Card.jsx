@@ -1,4 +1,4 @@
-export function Card({ title, subtitle, children, href, imageUrl }) {
+export default function Card({ title, subtitle, children, href, imageUrl }) {
 return (
 <a
 href={href}

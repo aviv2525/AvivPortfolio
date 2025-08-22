@@ -16,6 +16,7 @@ const skills = [
   // Mobile
   { group: "Mobile", items: [
     { name: "Android (Kotlin)", icon: "devicon-android-plain" },
+    { name: "React Native", icon: "devicon-android-plain" },
   ]},
   // Databases & Tools
   { group: "Databases & Tools", items: [
@@ -39,7 +40,7 @@ function SkillBadge({ icon, name }) {
   );
 }
 
-export function SkillsSection() {
+export default function SkillsSection() {
   return (
     <section id="skills" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
@@ -78,6 +79,7 @@ function LevelBar({ label, level = 85 }) {
   <LevelBar label="C# .NET" level={88} />
   <LevelBar label="React" level={75} />
   <LevelBar label="Kotlin / Android" level={80} />
+  <LevelBar label="React Native" level={80} />
   <LevelBar label="Node.js" level={78} />
   <LevelBar label="Algorithms & Data Structures" level={90} />
 </div>

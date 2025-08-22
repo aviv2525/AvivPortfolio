@@ -1,4 +1,4 @@
-export function AboutSection() {
+export default function AboutSection() {
   return (
     <section id="about" className="py-16 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6">
