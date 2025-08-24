@@ -1,18 +1,19 @@
 const skills = [
   // Frontend
-  { group: "Frontend", items: [
+  { group: "develop & Languages", items: [
     { name: "React", icon: "devicon-react-original" },
     { name: "HTML", icon: "devicon-html5-plain" },
     { name: "CSS3", icon: "devicon-css3-plain" },
     { name: "JavaScript", icon: "devicon-javascript-plain" },
-  ]},
-  // Backend & Languages
-  { group: "Backend & Languages", items: [
     { name: "C# .NET", icon: "devicon-dotnetcore-plain" },
+    { name: "C", icon: "devicon-C-plain" },
+    { name: "C++", icon: "devicon-C++-plain" },
     { name: "Java", icon: "devicon-java-plain" },
     { name: "Kotlin", icon: "devicon-kotlin-plain" },
     { name: "Node.js", icon: "devicon-nodejs-plain" },
   ]},
+  // Backend & Languages
+,
   // Mobile
   { group: "Mobile", items: [
     { name: "Android (Kotlin)", icon: "devicon-android-plain" },
@@ -23,12 +24,8 @@ const skills = [
     { name: "SQL", icon: "devicon-mysql-plain" },
     { name: "Git", icon: "devicon-git-plain" },
     { name: "GitHub", icon: "devicon-github-original" },
-    { name: "Docker", icon: "devicon-docker-plain" },
   ]},
-  // CS Core
-  { group: "CS Core", items: [
-    { name: "Algorithms & Data Structures", icon: "devicon-c-plain" }, // סמל כללי
-  ]},
+
 ];
 
 function SkillBadge({ icon, name }) {

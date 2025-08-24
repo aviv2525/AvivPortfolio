@@ -81,93 +81,13 @@ export default function Home() {
       {/* Projects Section */}
   
       <ProjectsSection />
-      <section id="projects" className="bg-white">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-          <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center mb-10">
-            Projects
-          </h3>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Card 1 */}
-            <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-              <div className="p-6">
-                <h4 className="text-lg font-semibold mb-1 group-hover:text-gray-700 transition">
-                  PlantPal 🌱
-                </h4>
-                <p className="text-gray-600 mb-4 text-sm">
-                  Android app with Retrofit, Room, Hilt, MVVM, and Perenual Plant API.
-                </p>
-                <a
-                  href="https://github.com/aviv2525/PlantPal"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-blue-600 hover:underline"
-                >
-                  View on GitHub →
-                </a>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-              <div className="p-6">
-                <h4 className="text-lg font-semibold mb-1 group-hover:text-gray-700 transition">
-                  Web Services API
-                </h4>
-                <p className="text-gray-600 mb-4 text-sm">
-                  RESTful API in Express.js & MongoDB, with reports and authentication.
-                </p>
-                <a
-                  href="https://github.com/aviv2525/WebServicesAPI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-blue-600 hover:underline"
-                >
-                  View on GitHub →
-                </a>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-              <div className="p-6">
-                <h4 className="text-lg font-semibold mb-1 group-hover:text-gray-700 transition">
-                  React Native App
-                </h4>
-                <p className="text-gray-600 mb-4 text-sm">
-                  Social-like app with profiles, media gallery, and instant booking feature.
-                </p>
-                <a
-                  href="https://github.com/aviv2525/ReactNativeApp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-blue-600 hover:underline"
-                >
-                  View on GitHub →
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
+           
       {/* Achievements Section */}
-      <AchievementsSection />
       {/* About Section */}
 
             <AboutSection />
-      <section id="about" className="bg-gray-50">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-          <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center mb-6">
-            About Me
-          </h3>
-          <p className="mx-auto max-w-3xl text-center text-gray-700">
-           I am Aviv, a Computer Science student graduating this year with a strong academic background and hands-on development experience.  
-          I have a solid understanding of algorithms, data structures, and software design principles.  
-          Skilled in C# .NET, Java, Kotlin, and JavaScript (React, Node.js), I enjoy building both web and mobile applications.  
-          I am a fast learner with strong analytical skills, capable of quickly adapting to new technologies and solving complex problems efficiently.  
-          My current focus is on developing modern applications that combine clean architecture with an engaging user experience.
-          </p>
-        </div>
-      </section>
+
       {/* Skills Section */}
       <SkillsSection />
       {/* Contact Section */}

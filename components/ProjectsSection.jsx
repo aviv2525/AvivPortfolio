@@ -2,38 +2,73 @@ function Tag({ children }) {
   return <span className="px-2 py-1 text-xs rounded-full bg-gray-100">{children}</span>;
 }
 
-function ProjectCard({ title, descr, tech = [], links = {} }) {
+function ProjectCard({ title, description, tech = [], links = {} }) {
   return (
     <div className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-md transition">
       <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-gray-700">{descr}</p>
+      <p className="mt-2 text-gray-700">{description}</p>
       <div className="mt-3 flex flex-wrap gap-2">
         {tech.map(t => <Tag key={t}>{t}</Tag>)}
       </div>
       <div className="mt-4 flex gap-4">
         {links.github && <a className="underline" href={links.github} target="_blank" rel="noreferrer">GitHub</a>}
         {links.demo && <a className="underline" href={links.demo} target="_blank" rel="noreferrer">Live Demo</a>}
+         {links.CARD && 
+          <a
+            className="underline"
+            href={links.CARD}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Project Card
+          </a>
+        }
       </div>
     </div>
   );
 }
 
+
+ {/* Card 3 */}
+            <div className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <div className="p-6">
+                <h4 className="text-lg font-semibold mb-1 group-hover:text-gray-700 transition">
+                  React Native App
+                </h4>
+                <p className="text-gray-600 mb-4 text-sm">
+                  Social-like app with profiles, media gallery, and instant booking feature.
+                </p>
+                <a
+                  href="https://github.com/aviv2525/ReactNativeApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-blue-600 hover:underline"
+                >
+                  View on GitHub →
+                </a>
+              </div>
+            </div>
+          
+
+
+
 // components/ProjectsSection.jsx
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "PlantPal 🌱",
-      descr:
+      title: "PlantPal 🌱 - (Kotlin Android)",
+      description:
         "Android app for house plants: API integration, favorites, detail screens, and offline support.",
       tech: ["Kotlin", "Android", "MVVM", "Retrofit", "Room", "Hilt", "Glide", "Perenual API"],
       links: {
         github: "https://github.com/aviv2525/PlantPal",
         demo: "https://youtu.be/hU3Em6RoTjY",
+        CARD: "/docs/plantpal-card.jpg",
       },
     },
     {
       title: "Web Services API",
-      descr:
+      description:
         "RESTful API with Express.js & MongoDB. Monthly reports, user endpoints, and JSDoc documentation.",
       tech: ["Node.js", "Express", "MongoDB", "REST", "JSDoc"],
       links: {
@@ -41,13 +76,22 @@ export default function ProjectsSection() {
       },
     },
     {
-      title: "Portfolio (Next.js)",
-      descr:
-        "Responsive portfolio with Tailwind, deployed on Netlify with CI/CD from GitHub.",
-      tech: ["Next.js", "React", "Tailwind", "Netlify"],
+      title: "GoBrew - (React Native App)",
+      description:
+        "Social-like app with profiles, media gallery, and instant booking feature.",
+      tech: [ "React Native", "Firebase", "Firestore"],
       links: {
-        github: "https://github.com/aviv2525/portfolio",
-        demo: "https://avivportfolio2525.netlify.app/",
+        github: "https://github.com/aviv2525/GoBrew",
+      },
+    },
+        {
+      title: "Landing page ☕ - (Kotlin Android)",
+      description:
+        "landing page  for small coffee shop menu",
+      tech: [ "Kotlin", "Android", "XML" ],
+      links: {
+        github: "https://https://github.com/aviv2525/Aviv-Coffee-App",
+        demo: "https://www.youtube.com/shorts/KU-f9GFVDSs",
       },
     },
   ];
@@ -70,7 +114,7 @@ export default function ProjectsSection() {
                   {p.title}
                 </h4>
 
-                <p className="text-gray-600 mb-4 text-sm">{p.descr}</p>
+                <p className="text-gray-600 mb-4 text-sm">{p.description}</p>
 
                 {/* Tech tags */}
                 {p.tech?.length > 0 && (
@@ -108,6 +152,17 @@ export default function ProjectsSection() {
                       {p.title.includes("PlantPal") ? "Video demo →" : "Live demo →"}
                     </a>
                   )}
+                  {p.links?.CARD && (
+                    <a
+                      href={p.links.CARD}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-blue-600 hover:underline"
+                    >
+                      {p.title.includes("PlantPal") ? "Card →" : "Project Card →"}
+                    </a>
+                  )}
+
                 </div>
               </div>
             </article>

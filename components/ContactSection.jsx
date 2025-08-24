@@ -7,13 +7,10 @@ export default function ContactSection() {
           Open to junior software roles and freelance projects. Feel free to reach out.
         </p>
         <div className="flex justify-center gap-4">
-          <a href="mailto:youremail@example.com" className="px-5 py-3 rounded-xl bg-white text-gray-900 font-semibold">
-            Email Me
-          </a>
           <a href="https://github.com/aviv2525" target="_blank" rel="noreferrer" className="px-5 py-3 rounded-xl border border-white/30">
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noreferrer" className="px-5 py-3 rounded-xl border border-white/30">
+          <a href="https://www.linkedin.com/in/aviv-malul-46a064216/" target="_blank" rel="noreferrer" className="px-5 py-3 rounded-xl border border-white/30">
             LinkedIn
           </a>
         </div>
