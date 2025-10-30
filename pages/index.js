@@ -54,8 +54,7 @@ export default function Home() {
             Hi, I’m Aviv 👋
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
-            Computer Science B.Sc. student 
-            Full‑stack developer in progress 🚀 specializing in Android, Web and Mobile apps.
+           B.Sc. in Computer Science with a strong drive to learn, create, and grow as a developer.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <a

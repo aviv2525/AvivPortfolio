@@ -108,7 +108,7 @@ export default function ProjectsSection() {
                     </a>
                   )}
                   {p.links?.CARD && (
-                    <a
+                    <a      
                       href={p.links.CARD}
                       target="_blank"
                       rel="noopener noreferrer"
