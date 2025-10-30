@@ -48,10 +48,11 @@ export default function Home() {
         id="home"
         className="relative overflow-hidden"
       >
+        
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-100 to-transparent" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h2 className="text-4xl/tight sm:text-5xl font-bold tracking-tight">
-            Hi, I’m Aviv 👋
+          Hi, I’m Aviv 👋
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
            B.Sc. in Computer Science with a strong drive to learn, create, and grow as a developer.
