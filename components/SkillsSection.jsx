@@ -11,6 +11,7 @@ const skills = [
     { name: "Java", icon: "devicon-java-plain" },
     { name: "Kotlin", icon: "devicon-kotlin-plain" },
     { name: "Node.js", icon: "devicon-nodejs-plain" },
+    { name: "RPA - UiPath", icon: "devicon-nodejs-plain" },
   ]},
   // Backend & Languages
 ,

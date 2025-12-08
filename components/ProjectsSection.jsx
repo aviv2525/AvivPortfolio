@@ -54,6 +54,17 @@ export default function ProjectsSection() {
         photo: "/docs/Checkers Version1.png",                      // ודא התאמה ברישיות לשם הקובץ
       },
     },
+        {
+      title: "UiPath - 🤖 Automation Bot",
+      description:
+        "An automation bot built with UiPath that streamlines business processes by interacting with files, websites, and systems, significantly reducing manual work and human errors.",
+      tech: ["RPA", "UiPath", "Automation"],
+      links: {
+        github: "https://github.com/aviv2525/UiPath-Outlook-Contacts-From-Excel.",  
+        photo: "",                    
+      },
+    },
+    
   ];
 
   return (

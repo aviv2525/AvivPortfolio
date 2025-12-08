@@ -1,9 +1,13 @@
+"use client";
 import { useEffect } from "react";
 import  AboutSection  from'../components/AboutSection.jsx'
 import  SkillsSection  from "../components/SkillsSection.jsx";
 import  ProjectsSection  from "../components/ProjectsSection.jsx";
 import  {AchievementsSection}  from "../components/AchievementsSection.jsx";
 import  ContactSection   from "../components/ContactSection.jsx";
+
+import Lottie from "lottie-react";
+import animationData from "../styles/SmileFace.json";
 
 console.log({
   AboutSection,
@@ -52,7 +56,16 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-100 to-transparent" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20 text-center">
           <h2 className="text-4xl/tight sm:text-5xl font-bold tracking-tight">
-          Hi, I’m Aviv 👋
+          <div   style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          >
+            Hi, I’m Aviv 
+          <Lottie animationData={animationData} loop={true} style={{width: 52, height: 52 }}/>
+          </div>
+  
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
            B.Sc. in Computer Science with a strong drive to learn, create, and grow as a developer.
