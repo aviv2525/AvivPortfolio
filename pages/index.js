@@ -63,13 +63,18 @@ export default function Home() {
           }}
           >
             Hi, I’m Aviv 
-          <Lottie animationData={animationData} loop={true} style={{width: 52, height: 52 }}/>
+          <Lottie animationData={animationData} loop={true} style={{width: 52, height: 52,marginTop: 8 , marginLeft: 8}}/>
           </div>
   
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
-           B.Sc. in Computer Science with a strong drive to learn, create, and grow as a developer.
+          <p>
+            B.Sc. in Computer Science with a strong drive to learn, create, and grow as a developer.
+            <br />
+            I enjoy learning new technologies, working on practical projects, and turning ideas into working products.
+          </p>            
           </p>
+
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <a
               href="https://github.com/aviv2525"
