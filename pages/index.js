@@ -68,12 +68,10 @@ export default function Home() {
   
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-gray-600">
-          <p>
             B.Sc. in Computer Science with a strong drive to learn, create, and grow as a developer.
             <br />
             I enjoy learning new technologies, working on practical projects, and turning ideas into working products.
           </p>            
-          </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
             <a

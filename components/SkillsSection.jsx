@@ -12,6 +12,9 @@ const skills = [
     { name: "Kotlin", icon: "devicon-kotlin-plain" },
     { name: "Node.js", icon: "devicon-nodejs-plain" },
     { name: "RPA - UiPath", icon: "devicon-nodejs-plain" },
+    { name: "Python", icon: "devicon-python-plain" },
+    { name: "PHP", icon: "devicon-php-plain" },
+    { name: "SQL", icon: "devicon-mysql-plain" },
   ]},
   // Backend & Languages
 ,
@@ -25,6 +28,8 @@ const skills = [
     { name: "SQL", icon: "devicon-mysql-plain" },
     { name: "Git", icon: "devicon-git-plain" },
     { name: "GitHub", icon: "devicon-github-original" },
+    {name: "Firebase - Firestore", icon: "devicon-firebase-plain" },
+    { name: "Postman", icon: "devicon-postman-plain" },
   ]},
 
 ];
