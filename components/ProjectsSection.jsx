@@ -27,7 +27,7 @@ export default function ProjectsSection() {
         "RESTful API with Express.js & MongoDB. Monthly reports, user endpoints, and JSDoc documentation.",
       tech: ["Node.js", "Express", "MongoDB", "REST", "JSDoc"],
       links: {
-        github: "https://github.com/aviv2525/WebServicesAPI",
+        github: "https://github.com/aviv2525/asyncronic-final-project",
       },
     },
     {
