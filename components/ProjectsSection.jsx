@@ -7,6 +7,27 @@ function Tag({ children }) {
   );
 }
 
+
+function ArrowIcon() {
+  return (
+    <svg
+      className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M17 8l4 4m0 0l-4 4m4-4H3"
+      />
+    </svg>
+  );
+}
+
+
 export default function ProjectsSection() {
   const projects = [
     {
@@ -64,7 +85,7 @@ export default function ProjectsSection() {
         "An automation bot built with UiPath that streamlines business processes by interacting with files, websites, and systems, significantly reducing manual work and human errors.",
       tech: ["RPA", "UiPath", "Automation"],
       links: {
-        // שים לב – הסרתי את הנקודה בסוף ה-URL
+        // שים לב – יש פה נקודה בסוף ה-URL אצלך (זה ישבור את הלינק)
         github: "https://github.com/aviv2525/UiPath-Outlook-Contacts-From-Excel.",
       },
     },
@@ -82,15 +103,15 @@ export default function ProjectsSection() {
             <article
               key={p.title}
               className="
+                group
                 flex h-full flex-col
                 rounded-2xl 
-                border 
-                border-gray-200 
+                border border-gray-200 
                 bg-white 
                 p-5 
                 shadow-sm 
-                transition 
-                hover:-translate-y-1 
+                transition
+                hover:-translate-y-1
                 hover:shadow-lg
               "
             >
@@ -121,9 +142,16 @@ export default function ProjectsSection() {
                     href={p.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-blue-600 hover:underline"
+                    className="
+                      inline-flex items-center gap-2
+                      text-sm font-medium
+                      text-blue-600
+                      transition-colors
+                      hover:text-blue-700
+                    "
                   >
-                    View on GitHub →
+                    View on GitHub
+                    <ArrowIcon />
                   </a>
                 )}
 
@@ -132,9 +160,16 @@ export default function ProjectsSection() {
                     href={p.links.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-blue-600 hover:underline"
+                    className="
+                      inline-flex items-center gap-2
+                      text-sm font-medium
+                      text-blue-600
+                      transition-colors
+                      hover:text-blue-700
+                    "
                   >
-                    {p.title.includes("PlantPal") ? "Video demo →" : "Live demo →"}
+                    {p.title.includes("PlantPal") ? "Video demo" : "Live demo"}
+                    <ArrowIcon />
                   </a>
                 )}
 
@@ -143,9 +178,16 @@ export default function ProjectsSection() {
                     href={p.links.CARD}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-blue-600 hover:underline"
+                    className="
+                      inline-flex items-center gap-2
+                      text-sm font-medium
+                      text-blue-600
+                      transition-colors
+                      hover:text-blue-700
+                    "
                   >
-                    {p.title.includes("PlantPal") ? "Card →" : "Project Card →"}
+                    {p.title.includes("PlantPal") ? "Card" : "Project Card"}
+                    <ArrowIcon />
                   </a>
                 )}
 
@@ -154,11 +196,18 @@ export default function ProjectsSection() {
                     href={p.links.photo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium text-blue-600 hover:underline"
+                    className="
+                      inline-flex items-center gap-2
+                      text-sm font-medium
+                      text-blue-600
+                      transition-colors
+                      hover:text-blue-700
+                    "
                   >
                     {p.title.includes("Checkers Game")
-                      ? "Example →"
-                      : "Project view →"}
+                      ? "Example"
+                      : "Project view"}
+                    <ArrowIcon />
                   </a>
                 )}
               </div>
