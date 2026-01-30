@@ -1,60 +1,118 @@
 "use client";
-import { useEffect } from "react";
-import AboutSection from '../components/AboutSection.jsx';
+import { useEffect, useRef, useState } from "react";
+import AboutSection from "../components/AboutSection.jsx";
 import SkillsSection from "../components/SkillsSection.jsx";
 import ProjectsSection from "../components/ProjectsSection.jsx";
-//import { AchievementsSection } from "../components/AchievementsSection.jsx";
 import ContactSection from "../components/ContactSection.jsx";
 import Lottie from "lottie-react";
 import animationData from "../styles/SmileFace.json";
 
 export default function Home() {
+  // ✅ חדש: state שמחליט אם להסתיר את ההדר
+  const [hideHeader, setHideHeader] = useState(false);
+  const lastScrollY = useRef(0);
+
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
-    
-    // Add animation on scroll
+
+    // ✅ אנימציות כניסה בסקשנים (כמו שהיה אצלך)
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px"
+      rootMargin: "0px 0px -100px 0px",
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fadeInUp');
+          entry.target.classList.add("animate-fadeInUp");
         }
       });
     }, observerOptions);
-    
-    document.querySelectorAll('.observe-element').forEach((el) => {
+
+    document.querySelectorAll(".observe-element").forEach((el) => {
       observer.observe(el);
     });
-    
-    return () => observer.disconnect();
+
+    // ✅ חדש: hide/show header לפי גלילה
+    lastScrollY.current = window.scrollY;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      const diff = y - lastScrollY.current;
+
+      // תמיד נראה בראש העמוד
+      if (y < 40) {
+        setHideHeader(false);
+        lastScrollY.current = y;
+        return;
+      }
+
+      // יורדים למטה -> להסתיר
+      if (diff > 10) setHideHeader(true);
+
+      // עולים למעלה -> להציג
+      if (diff < -10) setHideHeader(false);
+
+      lastScrollY.current = y;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
-  return (
-    <main className="min-h-screen bg-gray-50 text-gray-900">
+
+   return (
+    // ✅ pt-16 כדי שהתוכן לא ייכנס מתחת ל-header (כי הוא fixed)
+    <main className="min-h-screen bg-gray-50 text-gray-900 pt-16">
       {/* Header */}
-      <header className="sticky top-0 z-50 glass border-b border-white/20">
+      <header
+        className={[
+          "fixed top-0 left-0 right-0 z-50",
+          "glass", // תשאיר אם אתה רוצה את אפקט הזכוכית
+          "transition-transform duration-300 will-change-transform",
+          hideHeader ? "-translate-y-full" : "translate-y-0",
+
+          // ✅ במקום border (שיוצר קו דק), נשים הצללה עדינה
+          "shadow-sm shadow-black/10",
+          // אם עדיין רואים קו דק במובייל, תחליף ל: "shadow-none"
+        ].join(" ")}
+      >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-lg sm:text-xl font-bold tracking-tight gradient-text">
             Aviv Malul
           </h1>
+
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <a href="#home" className="text-gray-600 hover:text-indigo-600 transition-colors">
+            <a
+              href="#home"
+              className="text-gray-600 hover:text-indigo-600 transition-colors"
+            >
               Home
             </a>
-            <a href="#projects" className="text-gray-600 hover:text-indigo-600 transition-colors">
+            <a
+              href="#projects"
+              className="text-gray-600 hover:text-indigo-600 transition-colors"
+            >
               Projects
             </a>
-            <a href="#about" className="text-gray-600 hover:text-indigo-600 transition-colors">
+            <a
+              href="#about"
+              className="text-gray-600 hover:text-indigo-600 transition-colors"
+            >
               About
             </a>
-            <a href="#contact" className="text-gray-600 hover:text-indigo-600 transition-colors">
+            <a
+              href="#contact"
+              className="text-gray-600 hover:text-indigo-600 transition-colors"
+            >
               Contact
             </a>
           </nav>
+
           <a
             href="#contact"
             className="relative inline-flex items-center rounded-full bg-gradient-to-r from-blue-800 to-gray-600 px-5 py-2 text-sm font-medium text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden group"
@@ -68,30 +126,32 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="relative overflow-hidden mesh-gradient">
         <div className="absolute inset-0 grid-bg opacity-50" />
-        
+
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" />
-        <div className="absolute top-40 right-10 w-72 h-72 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style={{ animationDelay: '2s' }} />
-        
+        <div
+          className="absolute top-40 right-10 w-72 h-72 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+          style={{ animationDelay: "2s" }}
+        />
+
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="text-center">
-            <div className="animate-fadeInUp">
-    
-            </div>
-            
             <h2 className="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6 animate-fadeInUp animate-delay-100">
               <div className="flex items-center justify-center gap-3">
                 <span>Hi, I'm</span>
                 <span className="gradient-text">Aviv</span>
-                <Lottie 
-                  animationData={animationData} 
-                  loop={true} 
+                <Lottie
+                  animationData={animationData}
+                  loop={true}
                   className="w-16 h-16 md:w-20 md:h-20"
                 />
               </div>
             </h2>
-            
+
             <p className="mx-auto mt-6 max-w-2xl text-lg md:text-xl text-gray-600 leading-relaxed animate-fadeInUp animate-delay-200">
               B.Sc. in Computer Science with a strong drive to learn, create, and grow as a developer.  
               <br className="hidden md:block" />
