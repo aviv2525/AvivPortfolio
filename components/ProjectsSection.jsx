@@ -30,6 +30,25 @@ function ArrowIcon() {
 
 export default function ProjectsSection() {
   const projects = [
+ {
+    title: "Rafi Doors 🚪 - (Next.js Website)",
+    description:
+    "Smart digital workflow system for an established interior doors company, built with Next.js, TypeScript, Tailwind CSS, and Zod. Replaces legacy phone-based order intake with validated online forms and automated email processing. Deployed on Vercel."
+      ,tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Zod",
+      "Resend",
+      "lucide-react",
+      "Vercel (Deploy)",
+    ],
+    links: {
+      github: "https://github.com/aviv2525/Raf-door",
+      demo: "https://raf-door.vercel.app/",
+    },
+  },
     {
       title: "PlantPal 🌱 - (Kotlin Android)",
       description:
