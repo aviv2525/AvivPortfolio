@@ -30,6 +30,27 @@ function ArrowIcon() {
 
 export default function ProjectsSection() {
   const projects = [
+  {
+  title: "Coffez ☕ - Full Stack Coffee Marketplace",
+  description:
+    "Full-stack marketplace platform for independent coffee sellers. Users can browse sellers, explore menus, and place orders through a modern web interface. Built with Next.js and NestJS, using PostgreSQL (Neon) and Prisma ORM. The system includes JWT authentication, REST API architecture, and a scalable backend designed for production deployment.(soon)",
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "Prisma ORM",
+    "JWT Authentication",
+    "Neon Database",
+    "Tailwind CSS",
+    "Docker",
+  ],
+  links: {
+    github: "https://github.com/aviv2525/Coffez",
+    demo: null,
+  },
+},
  {
     title: "Rafi Doors 🚪 - (Next.js Website)",
     description:
