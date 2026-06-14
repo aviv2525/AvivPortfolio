@@ -31,6 +31,29 @@ function ArrowIcon() {
 export default function ProjectsSection() {
   const projects = [
   {
+    title: "SalesInsight AI 🤖 - AI Business Intelligence Platform",
+    description:
+      "AI-powered retail business intelligence platform enabling managers to analyze operational data and generate insights using natural language queries. Uses Retrieval-Augmented Generation (RAG) via Amazon Bedrock to provide answers grounded in actual company data, replacing traditional dashboards.",
+    tech: [
+      "Python",
+      "Flask",
+      "React",
+      "Vite",
+      "Amazon Bedrock",
+      "Claude (AI)",
+      "RAG",
+      "AWS Lambda",
+      "Amazon S3",
+      "Amazon EC2",
+      "Docker",
+      "Pandas",
+      "boto3",
+    ],
+    links: {
+      github: "https://github.com/aviv2525/SalesInsight-AI",
+    },
+  },
+  {
   title: "Coffez ☕ - Full Stack Coffee Marketplace",
   description:
     "Full-stack marketplace platform for independent coffee sellers. Users can browse sellers, explore menus, and place orders through a modern web interface. Built with Next.js and NestJS, using PostgreSQL (Neon) and Prisma ORM. The system includes JWT authentication, REST API architecture, and a scalable backend designed for production deployment.(soon)",

@@ -28,8 +28,17 @@ const skills = [
     { name: "SQL", icon: "devicon-mysql-plain" },
     { name: "Git", icon: "devicon-git-plain" },
     { name: "GitHub", icon: "devicon-github-original" },
-    {name: "Firebase - Firestore", icon: "devicon-firebase-plain" },
+    { name: "Firebase - Firestore", icon: "devicon-firebase-plain" },
     { name: "Postman", icon: "devicon-postman-plain" },
+    { name: "Docker", icon: "devicon-docker-plain" },
+    { name: "Pandas", icon: "devicon-pandas-original" },
+  ]},
+  { group: "Cloud & AI", items: [
+    { name: "AWS Lambda", icon: "devicon-amazonwebservices-plain" },
+    { name: "Amazon S3", icon: "devicon-amazonwebservices-plain" },
+    { name: "Amazon EC2", icon: "devicon-amazonwebservices-plain" },
+    { name: "Amazon Bedrock", icon: "devicon-amazonwebservices-plain" },
+    { name: "Flask", icon: "devicon-flask-original" },
   ]},
 
 ];
