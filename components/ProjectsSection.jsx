@@ -54,6 +54,26 @@ export default function ProjectsSection() {
     },
   },
   {
+    title: "RHCP Knowledge Assistant 🎸 - RAG System",
+    description:
+      "Web app that answers questions about the Red Hot Chili Peppers using Retrieval-Augmented Generation. Combines FAISS vector search with Google Gemini to provide grounded answers strictly based on retrieved context — preventing hallucinations outside the knowledge base.",
+    tech: [
+      "Python",
+      "Flask",
+      "FAISS",
+      "Google Gemini",
+      "Hugging Face",
+      "NLTK",
+      "Docker",
+      "HTML",
+      "CSS",
+      "JavaScript",
+    ],
+    links: {
+      github: "https://github.com/aviv2525/RHCP-RAG-System",
+    },
+  },
+  {
   title: "Coffez ☕ - Full Stack Coffee Marketplace",
   description:
     "Full-stack marketplace platform for independent coffee sellers. Users can browse sellers, explore menus, and place orders through a modern web interface. Built with Next.js and NestJS, using PostgreSQL (Neon) and Prisma ORM. The system includes JWT authentication, REST API architecture, and a scalable backend designed for production deployment.(soon)",
