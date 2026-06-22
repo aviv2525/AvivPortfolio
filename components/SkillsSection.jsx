@@ -39,6 +39,7 @@ const skills = [
     { name: "Amazon EC2", icon: "devicon-amazonwebservices-plain" },
     { name: "Amazon Bedrock", icon: "devicon-amazonwebservices-plain" },
     { name: "Flask", icon: "devicon-flask-original" },
+    { name: "N8N", icon: "devicon-nodejs-plain" },
   ]},
 
 ];
