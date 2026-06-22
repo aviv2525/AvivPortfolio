@@ -1,4 +1,3 @@
-@"
 # Node / Next.js
 node_modules/
 .next/
@@ -12,4 +11,6 @@ yarn-error.log*
 .env.*
 .DS_Store
 coverage/
-"@ | Out-File -Encoding utf8 .gitignore -Force
+
+# Separate projects (have their own repos)
+coffez/
