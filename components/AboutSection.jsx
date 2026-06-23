@@ -38,7 +38,7 @@ export default function AboutSection() {
               </div>
             </div>
             <span className="inline-flex items-center gap-1.5 self-start sm:self-center flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium bg-blue-50 text-blue-700 border border-blue-100">
-              May – August 2025
+              May – August 2026
             </span>
           </div>
 
